@@ -1,0 +1,24 @@
+function demo(input){
+    let actor = input[0];
+    let points = Number(input[1]);
+    let num = Number(input[2]);
+    let i = 2;
+    let juryMember = "";
+    let juryMemberPoints = 0;
+    let totalJmP = 0
+    for(j = 0; j < num; j++){
+        i++;
+        juryMember = input[i];
+        i++;
+        juryMemberPoints = Number(input[i]);
+        totalJmP = juryMember.length * juryMemberPoints / 2;
+        points += totalJmP;
+        if(points >= 1250.5){
+            console.log(`Congratulations, ${actor} got a nominee for leading role with ${points.toFixed(1)}!`);
+            break;
+        }
+    }
+    if(points < 1250.5){
+        console.log(`Sorry, ${actor} you need ${(1250.5 - points).toFixed(1)} more!`);
+    }
+}
