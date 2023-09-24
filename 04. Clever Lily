@@ -1,0 +1,21 @@
+function demo(input){
+    let age = Number(input[0]);
+    let wash = Number(input[1]);
+    let toy = Number(input[2]);
+    let evenMoney = 0;
+    let evenSum = 0;
+    let toySum = 0;
+    let money = 0;
+    for(i = 1; i <= age; i++){
+        if(i % 2 == 0){
+            evenMoney += 10;
+            evenSum += (evenMoney - 1);
+        }
+        else{
+            toySum += toy
+        }
+    }
+    let total = evenSum + toySum;
+    if(total >= wash){console.log(`Yes! ${(total - wash).toFixed(2)}`);}
+    else{{console.log(`No! ${(wash - total).toFixed(2)}`);}}
+}
